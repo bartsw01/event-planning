@@ -19,15 +19,15 @@ public class Event {
     }
 
 
-    public Integer calculateEventCost(String packageType){
+    public Integer calculateEventCost(){
 
-        if (packageType.equals("wedding")){
+        if (packageTypeName.equals("wedding")){
             packageTypeCost = 1000;
-        } else if (packageType.equals("corporate")){
+        } else if (packageTypeName.equals("corporate")){
             packageTypeCost = 750;
-        } else if (packageType.equals("birthday")){
+        } else if (packageTypeName.equals("birthday")){
             packageTypeCost = 500;
-        } else if(packageType.equals("reunion")){
+        } else if(packageTypeName.equals("reunion")){
             packageTypeCost = 400;
         }
 
