@@ -13,9 +13,9 @@ public class EventTest {
     }
 
     @Test
-    public void calculateEventCost_returnsCostForWedding_5000() throws Exception {
+    public void calculateEventCost_returnsCostForWedding_3750() throws Exception {
         Event testEvent = new Event("wedding", 25, "sandwiches", "full bar", "no bar");
-        Integer expected = 5000;
+        Integer expected = 3750;
         assertEquals(expected, testEvent.getEventCost());
     }
 
