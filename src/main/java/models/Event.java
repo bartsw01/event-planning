@@ -111,7 +111,7 @@ public class Event {
         } else if (discountCode.equals("guest500")){
             discountedEventCost = getEventCost()-5000;
         } else if (discountCode.equals("guest1000")){
-            return discountedEventCost = getEventCost()-7500;
+            return discountedEventCost = getEventCost()-50000;
         }
         return discountedEventCost;
     }
