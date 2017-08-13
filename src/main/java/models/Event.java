@@ -1,21 +1,23 @@
+package models;
+
 public class Event {
-    public String packageTypeName;
-    public int eventNumOfGuests;
-    public String foodPackage;
-    public String beveragePackage;
-    public String entertainmentPackage;
-    public int packageTypeCost;
-    public int foodPackageCost;
-    public int beveragePackageCost;
-    public int entertainmentPackageCost;
-    public int eventCost;
+    private String packageTypeName;
+    private int eventNumOfGuests;
+    private String foodPackage;
+    private String beveragePackage;
+    private String entertainmentPackage;
+    private int packageTypeCost;
+    private int foodPackageCost;
+    private int beveragePackageCost;
+    private int entertainmentPackageCost;
+    private int eventCost;
 
     public Event(String packageType, int numOfGuests, String food, String beverages, String entertainment){
-        packageTypeName = packageType;
-        eventNumOfGuests = numOfGuests;
-        foodPackage = food;
-        beveragePackage = beverages;
-        entertainmentPackage = entertainment;
+        this.packageTypeName = packageType;
+        this.eventNumOfGuests = numOfGuests;
+        this.foodPackage = food;
+        this.beveragePackage = beverages;
+        this.entertainmentPackage = entertainment;
     }
 
 
