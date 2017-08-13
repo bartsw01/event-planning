@@ -33,6 +33,13 @@ public class EventTest {
         assertEquals(expected, testEvent.getEventCost());
     }
 
+    @Test
+    public void calculateEventCost_returnsCostForBirthday_16500() throws Exception {
+        Event testEvent = new Event("birthday", 100, "steak dinner", "full bar", "live band");
+        Integer expected = 34750;
+        assertEquals(expected, testEvent.getEventCost());
+    }
+
 
 }
 
