@@ -12,7 +12,7 @@ public class Event {
     private int entertainmentPackageCost;
     private int eventCost;
     private String discountCode;
-    private int discountCodeTotal;
+    private int discountedEventCost;
 
 
     public Event(String packageType, int numOfGuests, String food, String beverages, String entertainment){
@@ -107,13 +107,13 @@ public class Event {
 
     public Integer getDiscountTotal(){
         if (discountCode.equals("guest250")){
-            discountCodeTotal = 2500;
+            discountedEventCost = eventCost-2500;
         } else if (discountCode.equals("guest500")){
-            discountCodeTotal = 5000;
+            discountedEventCost = eventCost-5000;
         } else if (discountCode.equals("guest1000")){
-            return discountCodeTotal = 7500;
+            return discountedEventCost = eventCost-7500;
         }
-        return discountCodeTotal;
+        return discountedEventCost;
     }
 
 
