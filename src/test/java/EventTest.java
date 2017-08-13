@@ -51,22 +51,10 @@ public class EventTest {
     public void calculateDiscountedEventCost_returnsDiscountedCostFor_250guests() throws Exception {
         Event testEvent = new Event("reunion", 250, "chicken dinner", "cash bar", "dj");
         Integer expected = 23400;
-        assertEquals(expected, testEvent.getEventCost());
+        assertEquals(expected, testEvent.getDiscountedEventCost("guest250"));
     }
 
-    @Test
-    public void calculateDiscountedEventCost_returnsCostForWedding_500guests() throws Exception {
-        Event testEvent = new Event("wedding", 500, "steak dinner", "full bar", "live band");
-        Integer expected = 17000;
-        assertEquals(expected, testEvent.getEventCost());
-    }
 
-    @Test
-    public void calculateDiscountedEventCost_returnsCostForCorporate_1000guests() throws Exception {
-        Event testEvent = new Event("corporate", 1000, "sandwiches", "no bar", "background music");
-        Integer expected = 25000;
-        assertEquals(expected, testEvent.getEventCost());
-    }
 
 
 

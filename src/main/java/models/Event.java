@@ -105,13 +105,13 @@ public class Event {
 
     }
 
-    public Integer getDiscountTotal(){
+    public Integer getDiscountedEventCost(String discountCode){
         if (discountCode.equals("guest250")){
-            discountedEventCost = eventCost-2500;
+            discountedEventCost = getEventCost()-2500;
         } else if (discountCode.equals("guest500")){
-            discountedEventCost = eventCost-5000;
+            discountedEventCost = getEventCost()-5000;
         } else if (discountCode.equals("guest1000")){
-            return discountedEventCost = eventCost-7500;
+            return discountedEventCost = getEventCost()-7500;
         }
         return discountedEventCost;
     }
