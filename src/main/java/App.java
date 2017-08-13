@@ -20,7 +20,7 @@ public class App {
             String entertainment = bufferedReader.readLine();
 
             Event newEvent = new Event(packageType, numOfGuests, food, beverage, entertainment);
-            int totalCost = newEvent.calculateEventCost();
+            int totalCost = newEvent.getEventCost();
 
             System.out.println("The total cost of your event will be $" + totalCost + ".");
         } catch (IOException e) {

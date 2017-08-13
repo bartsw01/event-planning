@@ -12,6 +12,7 @@ public class Event {
     private int entertainmentPackageCost;
     private int eventCost;
 
+
     public Event(String packageType, int numOfGuests, String food, String beverages, String entertainment){
         this.packageTypeName = packageType;
         this.eventNumOfGuests = numOfGuests;
@@ -20,43 +21,87 @@ public class Event {
         this.entertainmentPackage = entertainment;
     }
 
+    public String getPackageTypeName() {
+        return packageTypeName;
+    }
 
-    public Integer calculateEventCost(){
+    public int getEventNumOfGuests() {
+        return eventNumOfGuests;
+    }
 
-        if (packageTypeName.equals("wedding")){
+    public String getFoodPackage() {
+        return foodPackage;
+    }
+
+    public String getBeveragePackage() {
+        return beveragePackage;
+    }
+
+    public String getEntertainmentPackage() {
+        return entertainmentPackage;
+    }
+
+
+    public Integer getPackageTypeCost() {
+
+        if (packageTypeName.equals("wedding")) {
             packageTypeCost = 1000;
-        } else if (packageTypeName.equals("corporate")){
+        } else if (packageTypeName.equals("corporate")) {
             packageTypeCost = 750;
-        } else if (packageTypeName.equals("birthday")){
+        } else if (packageTypeName.equals("birthday")) {
             packageTypeCost = 500;
-        } else if(packageTypeName.equals("reunion")){
+        } else if (packageTypeName.equals("reunion")) {
             packageTypeCost = 400;
         }
 
-        if (foodPackage.equals("steak dinner")){
+        return packageTypeCost;
+
+    }
+
+    public Integer getFoodPackageCost() {
+
+        if (foodPackage.equals("steak dinner")) {
             foodPackageCost = 50;
-        } else if (foodPackage.equals("chicken dinner")){
+        } else if (foodPackage.equals("chicken dinner")) {
             foodPackageCost = 25;
-        } else if(foodPackage.equals("sandwiches")){
+        } else if (foodPackage.equals("sandwiches")) {
             foodPackageCost = 10;
         }
-        if (beveragePackage.equals("full bar")){
+        return foodPackageCost;
+
+    }
+
+    public Integer getBeveragePackageCost() {
+        if (beveragePackage.equals("full bar")) {
             beveragePackageCost = 100;
-        } else if (beveragePackage.equals("cash bar")){
+        } else if (beveragePackage.equals("cash bar")) {
             beveragePackageCost = 20;
-        } else if(beveragePackage.equals("no bar")){
+        } else if (beveragePackage.equals("no bar")) {
             beveragePackageCost = 5;
         }
-        if (entertainmentPackage.equals("live band")){
+        return beveragePackageCost;
+    }
+
+    public Integer getEntertainmentPackageCost() {
+
+
+        if (entertainmentPackage.equals("live band")) {
             entertainmentPackageCost = 1000;
-        }else if (entertainmentPackage.equals("dj")){
+        } else if (entertainmentPackage.equals("dj")) {
             entertainmentPackageCost = 500;
-        } else if(entertainmentPackage.equals("background music")){
+        } else if (entertainmentPackage.equals("background music")) {
             entertainmentPackageCost = 100;
         }
+        return entertainmentPackageCost;
 
-        eventCost = (((foodPackageCost + beveragePackageCost)*eventNumOfGuests) + entertainmentPackageCost);
-        return eventCost;
     }
+
+    public Integer getEventCost() {
+
+        eventCost = (((getFoodPackageCost() + getBeveragePackageCost()) * getEventNumOfGuests()) + getEntertainmentPackageCost() + getPackageTypeCost());
+        return eventCost;
+
+    }
+
 
 }
