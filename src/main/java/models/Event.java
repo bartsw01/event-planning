@@ -88,11 +88,11 @@ public class Event {
 
 
         if (entertainmentPackage.equals("live band")) {
-            entertainmentPackageCost = 1000;
+            entertainmentPackageCost = 5000;
         } else if (entertainmentPackage.equals("dj")) {
-            entertainmentPackageCost = 500;
+            entertainmentPackageCost = 1000;
         } else if (entertainmentPackage.equals("background music")) {
-            entertainmentPackageCost = 100;
+            entertainmentPackageCost = 250;
         }
         return entertainmentPackageCost;
 
@@ -107,11 +107,11 @@ public class Event {
 
     public Integer getDiscountedEventCost(String discountCode){
         if (discountCode.equals("guest250")){
-            discountedEventCost = getEventCost()-2500;
+            discountedEventCost = getEventCost()-1000;
         } else if (discountCode.equals("guest500")){
-            discountedEventCost = getEventCost()-5000;
+            discountedEventCost = getEventCost()-foodPackageCost;
         } else if (discountCode.equals("guest1000")){
-            return discountedEventCost = getEventCost()-7500;
+            return discountedEventCost = getEventCost()-5000;
         }
         return discountedEventCost;
     }
