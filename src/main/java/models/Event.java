@@ -109,9 +109,9 @@ public class Event {
         if (discountCode.equals("guest250")){
             discountedEventCost = getEventCost()-1000;
         } else if (discountCode.equals("guest500")){
-            discountedEventCost = getEventCost()-foodPackageCost;
+            discountedEventCost = getEventCost()-5000;
         } else if (discountCode.equals("guest1000")){
-            return discountedEventCost = getEventCost()-5000;
+            return discountedEventCost = getEventCost()-getFoodPackageCost();
         }
         return discountedEventCost;
     }
