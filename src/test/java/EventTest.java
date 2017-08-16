@@ -55,14 +55,14 @@ public class EventTest {
     }
 
     @Test
-    public void calculateEventCost_returnsDiscountedCostForReunion_500guest() throws Exception {
+    public void calculateEventCost_returnsFreeLiveBandForReunion_500guest() throws Exception {
         Event testEvent = new Event("reunion", 500, "chicken dinner", "cash bar", "dj");
         Integer expected = 18400;
         assertEquals(expected, testEvent.getDiscountedEventCost("guest500"));
     }
 
     @Test
-    public void calculateEventCost_returnsDiscountedCostForWedding_1000guest() throws Exception {
+    public void calculateEventCost_returnsFreeChickenDinnerForWedding_1000guest() throws Exception {
         Event testEvent = new Event("wedding", 1000, "steak dinner", "full bar", "live band");
         Integer expected = 144500;
         assertEquals(expected, testEvent.getDiscountedEventCost("guest1000"));
